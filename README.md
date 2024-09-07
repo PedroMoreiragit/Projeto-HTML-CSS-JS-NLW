@@ -1,34 +1,37 @@
 # Aplicação de Gerenciamento de Atividades
 
-## Descrição
-Esta aplicação permite aos usuários cadastrar, gerenciar e concluir atividades diárias, oferecendo uma interface simples e intuitiva para organização de tarefas. O design é responsivo, adaptando-se a diferentes tamanhos de tela, com foco na usabilidade e acessibilidade.
+Esta aplicação foi desenvolvida como parte do evento **NLW Journey**, promovido pela **Rocketseat**, com o objetivo de criar uma plataforma simples para cadastro e gerenciamento de atividades diárias. O projeto utiliza tecnologias web modernas e oferece uma interface intuitiva e estilosa para o usuário. A seguir, explicamos as tecnologias utilizadas e como elas foram aplicadas no projeto.
 
 ## Tecnologias Utilizadas
 
-### 1. **HTML**
-   - **Estrutura**: O HTML é usado para estruturar os elementos da interface de usuário, como formulários, seções e botões.
-   - **Formulário de Cadastro**: Um formulário permite que os usuários adicionem novas atividades com data e hora específicas.
-   - **SVGs**: Ícones SVG são utilizados para melhorar a aparência visual.
+### 1. **HTML5**
+A estrutura da página foi construída utilizando HTML5, garantindo semântica adequada e compatibilidade com os padrões modernos de desenvolvimento web. Cada elemento foi cuidadosamente escolhido para criar uma interface acessível e de fácil navegação.
 
-### 2. **CSS**
-   - **Reset de Estilo**: Todos os elementos básicos têm margens e preenchimentos zerados para garantir um layout consistente entre diferentes navegadores.
-   - **Responsividade**: A aplicação usa media queries para se adaptar a dispositivos maiores (largura > 1024px), ajustando o layout.
-   - **Animação**: O efeito de transição `@keyframes` é utilizado para a animação de fade-in das atividades ao serem exibidas.
-   - **Foco Interativo**: Os campos de entrada de texto têm um estilo de borda personalizada quando estão em foco, destacando a interação do usuário.
-   - **Botões com Feedback Visual**: Botões têm efeito de sombra ao passar o mouse, melhorando a interação e oferecendo feedback visual.
+### 2. **CSS3**
+O estilo visual da aplicação foi construído utilizando **CSS3**. Através de propriedades como **flexbox**, **grid**, e **media queries**, foi possível criar uma interface responsiva que se adapta a diferentes tamanhos de tela, tanto em dispositivos móveis quanto em desktops. A tipografia foi feita com a fonte **Inter**, importada do Google Fonts, proporcionando uma leitura agradável e moderna.
+
+#### Destaques no CSS:
+- Estilização de botões com transições suaves e efeitos de hover.
+- Uso de cores escuras para criar uma aparência moderna e minimalista.
+- Estilização responsiva, adaptando o layout em telas maiores através de *media queries*.
 
 ### 3. **JavaScript**
-   - **Manipulação de DOM**: O JavaScript é utilizado para manipular elementos da página, atualizando a lista de atividades dinamicamente.
-   - **Formatação de Data**: A biblioteca `dayjs` é usada para formatação de datas e horários, garantindo consistência nos formatos exibidos.
-   - **Validação de Atividades**: O código verifica se há conflitos de datas e horários ao adicionar novas atividades.
-   - **Conclusão de Atividades**: O estado das atividades (finalizada ou não) pode ser alterado por meio de uma checkbox associada a cada uma delas.
+O comportamento dinâmico da aplicação foi desenvolvido utilizando **JavaScript**. As funções principais envolvem a manipulação do DOM, permitindo a criação de atividades dinâmicas, exibição de horários formatados e controle de estados (atividades concluídas ou não).
 
-### 4. **Bibliotecas Externas**
-   - **Google Fonts**: A aplicação utiliza a fonte 'Inter', que é carregada via Google Fonts.
-   - **Day.js**: A biblioteca `dayjs` é usada para formatação e manipulação de datas, sendo crucial para exibir as atividades em diferentes formatos (por exemplo, dia da semana, dia do mês e hora).
-   - **CDN**: Tanto a biblioteca `dayjs` quanto o suporte a localização em português brasileiro são carregados diretamente de um CDN (Content Delivery Network).
+#### Principais Funções:
+- `CriarItemDeAtividade`: Cria o HTML dinamicamente para cada atividade cadastrada.
+- `AtualizarListaDeAtividades`: Atualiza a lista de atividades na tela com base no array de atividades.
+- `SalvarAtividade`: Salva uma nova atividade no array e atualiza a exibição.
+- `CriarDiaSelecao` e `CriarHorasSelecao`: Preenchem automaticamente os campos de data e hora disponíveis para seleção.
 
-## Funcionalidades
+### 4. **Day.js**
+Para manipulação de datas e horários, foi utilizada a biblioteca **Day.js**. Ela permite a formatação e exibição de datas em diferentes formatos, simplificando o processo de apresentação de informações relacionadas ao tempo, como dias da semana e horas.
 
-### 1. **Cadastro de Atividades**
-   - Os usuários podem cadastrar uma atividade, definindo um nome, data e hora. O sistema previne conflitos
+### 5. **Rocketseat e NLW Journey**
+Esta aplicação foi desenvolvida durante o evento **NLW Journey** da **Rocketseat**, uma plataforma brasileira focada no ensino de tecnologias modernas de desenvolvimento de software. A Rocketseat é conhecida por fornecer uma experiência de aprendizado imersiva, com desafios práticos e projetos que simulam demandas reais do mercado de trabalho. Seus eventos, como o **NLW (Next Level Week)**, são intensivos e têm como objetivo guiar os desenvolvedores por uma jornada de aprendizado acelerado.
+
+## Como Executar
+
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seu-usuario/nlw-journey-atividades.git
